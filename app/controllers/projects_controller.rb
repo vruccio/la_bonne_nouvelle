@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 
   def index
+    @projects = policy_scope(Project).order(created_at: :desc)
     @projects = Project.where(user: current_user)
   end
 
