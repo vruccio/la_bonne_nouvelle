@@ -1,22 +1,25 @@
 class ProjectsController < ApplicationController
+
+  def index
+    @projects = Project.where(user: current_user)
+  end
+
+
   def show
   end
 
-  def index
+   def new
   end
 
   def create
-  end
-
-  def new
-  end
-
-  def delete
   end
 
   def edit
   end
 
   def update
+  end
+
+  def delete
   end
 end
